@@ -1,0 +1,189 @@
+{
+    "service": {
+        "serviceArn": "arn:aws:ecs:us-east-1:405935009745:service/devops-challenge-production-cluster/devops-challenge-production-service",
+        "serviceName": "devops-challenge-production-service",
+        "clusterArn": "arn:aws:ecs:us-east-1:405935009745:cluster/devops-challenge-production-cluster",
+        "loadBalancers": [
+            {
+                "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:405935009745:targetgroup/devops-challenge-tg/8395baf8bcab5183",
+                "containerName": "devops-challenge-container",
+                "containerPort": 5000
+            }
+        ],
+        "serviceRegistries": [],
+        "status": "ACTIVE",
+        "desiredCount": 1,
+        "runningCount": 0,
+        "pendingCount": 1,
+        "launchType": "FARGATE",
+        "platformVersion": "LATEST",
+        "platformFamily": "Linux",
+        "taskDefinition": "arn:aws:ecs:us-east-1:405935009745:task-definition/devops-challenge-production:1",
+        "deploymentConfiguration": {
+            "deploymentCircuitBreaker": {
+                "enable": false,
+                "rollback": false
+            },
+            "maximumPercent": 200,
+            "minimumHealthyPercent": 100,
+            "strategy": "ROLLING",
+            "bakeTimeInMinutes": 0
+        },
+        "deployments": [
+            {
+                "id": "ecs-svc/1416266045175364715",
+                "status": "PRIMARY",
+                "taskDefinition": "arn:aws:ecs:us-east-1:405935009745:task-definition/devops-challenge-production:1",
+                "desiredCount": 0,
+                "pendingCount": 0,
+                "runningCount": 0,
+                "failedTasks": 0,
+                "createdAt": "2026-05-10T19:58:26.352000+01:00",
+                "updatedAt": "2026-05-10T19:58:26.352000+01:00",
+                "launchType": "FARGATE",
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-0d0af48491fe03e08",
+                            "subnet-0f27472b6ba77720d"
+                        ],
+                        "securityGroups": [
+                            "sg-0fdb5ae38fffc01ff"
+                        ],
+                        "assignPublicIp": "ENABLED"
+                    }
+                },
+                "rolloutState": "IN_PROGRESS",
+                "rolloutStateReason": "ECS deployment ecs-svc/1416266045175364715 in progress."
+            },
+            {
+                "id": "ecs-svc/6680066505734411724",
+                "status": "ACTIVE",
+                "taskDefinition": "arn:aws:ecs:us-east-1:405935009745:task-definition/devops-challenge-production:1",
+                "desiredCount": 1,
+                "pendingCount": 1,
+                "runningCount": 0,
+                "failedTasks": 5,
+                "createdAt": "2026-05-10T19:47:16.798000+01:00",
+                "updatedAt": "2026-05-10T19:55:52.176000+01:00",
+                "launchType": "FARGATE",
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-0d0af48491fe03e08",
+                            "subnet-0f27472b6ba77720d"
+                        ],
+                        "securityGroups": [
+                            "sg-0fdb5ae38fffc01ff"
+                        ],
+                        "assignPublicIp": "ENABLED"
+                    }
+                },
+                "rolloutState": "IN_PROGRESS",
+                "rolloutStateReason": "ECS deployment ecs-svc/6680066505734411724 in progress."
+            }
+        ],
+        "roleArn": "arn:aws:iam::405935009745:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+        "events": [
+            {
+                "id": "4182586d-7ee7-4bdb-8c01-83315bce6058",
+                "createdAt": "2026-05-10T19:58:08.715000+01:00",
+                "message": "(service devops-challenge-production-service) has started 1 tasks: (task 06ec5b70be95471787489092acef5381)."
+            },
+            {
+                "id": "0cf481a4-2493-4eee-a8e4-a95dd5e2c487",
+                "createdAt": "2026-05-10T19:57:37.210000+01:00",
+                "message": "(service devops-challenge-production-service) was unable to place a task. Reason: CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref 405935009745.dkr.ecr.us-east-1.amazonaws.com/devops-challenge-production:latest: 405935009745.dkr.ecr.us-east-1.amazonaws.com/devops-challenge-production:latest: not found."
+            },
+            {
+                "id": "9fd698f5-059a-4f87-8daa-6b8d0e4eab4d",
+                "createdAt": "2026-05-10T19:55:45.388000+01:00",
+                "message": "(service devops-challenge-production-service) has started 1 tasks: (task 2be9e9eabf164800aaea6c82ed664ea6)."
+            },
+            {
+                "id": "ee3dce70-a780-4207-9b4a-218c0ff4b337",
+                "createdAt": "2026-05-10T19:55:12.445000+01:00",
+                "message": "(service devops-challenge-production-service) was unable to place a task. Reason: CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref 405935009745.dkr.ecr.us-east-1.amazonaws.com/devops-challenge-production:latest: 405935009745.dkr.ecr.us-east-1.amazonaws.com/devops-challenge-production:latest: not found."
+            },
+            {
+                "id": "fb3a19e9-7ad1-45df-9b68-b577fdd1b2bd",
+                "createdAt": "2026-05-10T19:53:37.325000+01:00",
+                "message": "(service devops-challenge-production-service) has started 1 tasks: (task 5523fdc5543343cdb519f652a0c48c27)."
+            },
+            {
+                "id": "45a9992b-9b5c-4eba-9449-fd5f5f970bfb",
+                "createdAt": "2026-05-10T19:53:06.138000+01:00",
+                "message": "(service devops-challenge-production-service) was unable to place a task. Reason: CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref 405935009745.dkr.ecr.us-east-1.amazonaws.com/devops-challenge-production:latest: 405935009745.dkr.ecr.us-east-1.amazonaws.com/devops-challenge-production:latest: not found."
+            },
+            {
+                "id": "e416e3a2-0ab5-402a-8ab4-4ca5510779b3",
+                "createdAt": "2026-05-10T19:51:31.885000+01:00",
+                "message": "(service devops-challenge-production-service) has started 1 tasks: (task 79d1fd1a0eec4a5e9690ef9a0865aaa4)."
+            },
+            {
+                "id": "6531335c-0cbd-449d-b636-b63763ad2bd4",
+                "createdAt": "2026-05-10T19:51:00.511000+01:00",
+                "message": "(service devops-challenge-production-service) was unable to place a task. Reason: CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref 405935009745.dkr.ecr.us-east-1.amazonaws.com/devops-challenge-production:latest: 405935009745.dkr.ecr.us-east-1.amazonaws.com/devops-challenge-production:latest: not found."
+            },
+            {
+                "id": "e7da9590-cd53-40b3-92f0-b4660714706c",
+                "createdAt": "2026-05-10T19:49:36.266000+01:00",
+                "message": "(service devops-challenge-production-service) has started 1 tasks: (task 0badbdccc7734e93bb4920901be3286d)."
+            },
+            {
+                "id": "5c7ac8a6-bf86-493b-9dcf-8564d4675f6b",
+                "createdAt": "2026-05-10T19:49:05.411000+01:00",
+                "message": "(service devops-challenge-production-service) was unable to place a task. Reason: CannotPullContainerError: pull image manifest has been retried 7 time(s): failed to resolve ref 405935009745.dkr.ecr.us-east-1.amazonaws.com/devops-challenge-production:latest: 405935009745.dkr.ecr.us-east-1.amazonaws.com/devops-challenge-production:latest: not found."
+            },
+            {
+                "id": "7b6dd50a-9d79-478f-bd08-56ad4420120a",
+                "createdAt": "2026-05-10T19:47:35.589000+01:00",
+                "message": "(service devops-challenge-production-service) has started 1 tasks: (task 346b860bf40b440bb1583f486b34cfd0)."
+            }
+        ],
+        "createdAt": "2026-05-10T19:47:16.798000+01:00",
+        "currentServiceRevisions": [
+            {
+                "arn": "arn:aws:ecs:us-east-1:405935009745:service-revision/devops-challenge-production-cluster/devops-challenge-production-service/1416266045175364715",
+                "requestedTaskCount": 0,
+                "runningTaskCount": 0,
+                "pendingTaskCount": 0
+            },
+            {
+                "arn": "arn:aws:ecs:us-east-1:405935009745:service-revision/devops-challenge-production-cluster/devops-challenge-production-service/6680066505734411724",
+                "requestedTaskCount": 1,
+                "runningTaskCount": 0,
+                "pendingTaskCount": 1
+            }
+        ],
+        "placementConstraints": [],
+        "placementStrategy": [],
+        "networkConfiguration": {
+            "awsvpcConfiguration": {
+                "subnets": [
+                    "subnet-0d0af48491fe03e08",
+                    "subnet-0f27472b6ba77720d"
+                ],
+                "securityGroups": [
+                    "sg-0fdb5ae38fffc01ff"
+                ],
+                "assignPublicIp": "ENABLED"
+            }
+        },
+        "healthCheckGracePeriodSeconds": 0,
+        "schedulingStrategy": "REPLICA",
+        "deploymentController": {
+            "type": "ECS"
+        },
+        "createdBy": "arn:aws:iam::405935009745:user/devops-challenge-user",
+        "enableECSManagedTags": false,
+        "propagateTags": "NONE",
+        "enableExecuteCommand": false,
+        "availabilityZoneRebalancing": "DISABLED",
+        "resourceManagementType": "CUSTOMER"
+    }
+}
